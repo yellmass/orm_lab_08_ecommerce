@@ -1,9 +1,6 @@
 package com.example.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,8 +15,8 @@ public class Address extends BaseEntity{
 
     private String name;
     private String street;
-    private String zipcode;
+    private String zipCode;
     @ManyToOne
-    @Column(name = "customer_id")
+    @JoinColumn(name = "customer_id")
     private Customer customer;
 }
