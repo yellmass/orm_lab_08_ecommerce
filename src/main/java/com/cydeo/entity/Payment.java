@@ -1,10 +1,11 @@
-package com.example.entity;
+package com.cydeo.entity;
 
-import com.example.enums.DiscountType;
+import com.cydeo.enums.PaymentMethod;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,16 +14,13 @@ import java.math.BigDecimal;
 
 @Entity
 @NoArgsConstructor
-@Getter
-@Setter
-public class Discount extends BaseEntity{
+@Data
+public class Payment extends BaseEntity{
 
-    @Column(precision = 19,scale = 2)
-    private BigDecimal discount;
+    @Column(name = "paid_price")
+    private BigDecimal paidPrice;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "discount_type")
-    private DiscountType discountType;
-
-    private String name;
+    @Column(name = "payment_method")
+    private PaymentMethod paymentMethod;
 }

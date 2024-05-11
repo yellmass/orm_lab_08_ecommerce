@@ -1,18 +1,16 @@
-package com.example.entity;
+package com.cydeo.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.util.Set;
-import java.util.jar.JarEntry;
 
 @Entity
 @NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class Product extends BaseEntity{
 
     private String name;

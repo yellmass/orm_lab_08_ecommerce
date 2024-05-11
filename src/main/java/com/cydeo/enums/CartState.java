@@ -1,4 +1,4 @@
-package com.example.enums;
+package com.cydeo.enums;
 
 public enum CartState {
         CREATED,SOLD

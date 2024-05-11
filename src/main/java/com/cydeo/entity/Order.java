@@ -1,6 +1,7 @@
-package com.example.entity;
+package com.cydeo.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,8 +10,7 @@ import java.math.BigDecimal;
 
 @Entity
 @NoArgsConstructor
-@Getter
-@Setter
+@Data
 @Table(name = "orders")
 public class Order extends BaseEntity{
 

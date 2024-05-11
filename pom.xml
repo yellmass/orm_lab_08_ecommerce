@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.cydeo</groupId>
-    <artifactId>orm_lab_08_ecommerce</artifactId>
+    <artifactId><![CDATA[orm_lab_08_&_09_ecommerce]]></artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>orm_lab_08_ecommerce</name>
     <description>orm_lab_08_ecommerce</description>
