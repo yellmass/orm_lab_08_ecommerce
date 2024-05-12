@@ -13,7 +13,8 @@ import java.util.Set;
 
 @Entity
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 public class Category extends BaseEntity{
 
     private String name;
@@ -24,4 +25,11 @@ public class Category extends BaseEntity{
              joinColumns= @JoinColumn(name = "c_id")
     )
     private Set<Product> products;
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

@@ -18,13 +18,13 @@ public class Order extends BaseEntity{
     private BigDecimal paidPrice;
     @Column(name = "total_price", precision = 19, scale = 2)
     private BigDecimal totalPrice;
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     @JoinColumn(name = "cart_id")
     private Cart cart;
-    @ManyToOne(fetch = FetchType.LAZY) // by default OneToOne and ManyToOne is EAGER
+    @ManyToOne // by default OneToOne and ManyToOne is EAGER
     @JoinColumn(name = "customer_id")
     private Customer customer;
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     @JoinColumn(name = "payment_id")
     private Payment payment;
 }
