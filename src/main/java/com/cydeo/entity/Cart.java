@@ -10,8 +10,7 @@ import lombok.Setter;
 import java.util.Set;
 
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 public class Cart extends BaseEntity{
 
@@ -24,15 +23,4 @@ public class Cart extends BaseEntity{
     @JoinColumn(name = "discount_id")
     private Discount discount;
 
-    @OneToMany(mappedBy = "cart")
-    private Set<CartItem> cartItems;
-
-    @Override
-    public String toString() {
-        return "Cart{" +
-                "cartState=" + cartState +
-                ", customer=" + customer +
-                ", discount=" + discount +
-                '}';
-    }
 }

@@ -9,20 +9,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Set;
 
 @Entity
 @NoArgsConstructor
-@Getter
-@Setter
-public class Category extends BaseEntity{
+@Data
+public class Category extends BaseEntity {
 
     private String name;
 
-    @ManyToMany
+    /*@ManyToMany
     @JoinTable(name = "product_category_rel",
-            inverseJoinColumns= @JoinColumn(name = "p_id"),
-             joinColumns= @JoinColumn(name = "c_id")
+            joinColumns = @JoinColumn(name = "c_id"),
+            inverseJoinColumns = @JoinColumn(name = "p_id")
     )
     private Set<Product> products;
 
@@ -31,5 +29,5 @@ public class Category extends BaseEntity{
         return "Category{" +
                 "name='" + name + '\'' +
                 '}';
-    }
+    }*/
 }

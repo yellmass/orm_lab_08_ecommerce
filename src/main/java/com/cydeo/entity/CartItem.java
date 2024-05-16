@@ -5,7 +5,8 @@ import lombok.*;
 
 @Entity
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Table(name = "cart_item")
 public class CartItem extends BaseEntity{
 

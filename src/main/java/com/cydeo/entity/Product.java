@@ -7,10 +7,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 public class Product extends BaseEntity{
 
     private String name;
@@ -20,10 +22,20 @@ public class Product extends BaseEntity{
     @Column(name = "remaining_quantity")
     private Integer remainingQuantity;
 
-//    @ManyToMany
-//    @JoinTable(name = "product_category_rel",
-//            joinColumns = @JoinColumn(name = "p_id"),
-//            inverseJoinColumns = @JoinColumn(name = "c_id")
-//    )
-//    private Set<Category> categories;
+    @ManyToMany
+    @JoinTable(name = "product_category_rel",
+            joinColumns = @JoinColumn(name = "p_id"),
+            inverseJoinColumns = @JoinColumn(name = "c_id")
+    )
+    private List<Category> categories;
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", remainingQuantity=" + remainingQuantity +
+                '}';
+    }
 }
