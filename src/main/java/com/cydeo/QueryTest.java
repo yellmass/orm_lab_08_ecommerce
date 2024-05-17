@@ -61,9 +61,9 @@ public class QueryTest implements CommandLineRunner {
         //System.out.println(cartItemRepository.countBy());
         //System.out.println(cartItemRepository.countBy());  //1998
         //System.out.println(cartItemRepository.getByCart_CartState(CartState.SOLD));
-        //System.out.println(cartItemRepository.getByCart_CartStateAndProduct_Name(CartState.SOLD, "Tomatoes"));
-        System.out.println(cartItemRepository.retrieveByCartStateAndProduct_Name(CartState.SOLD, "Tomatoes"));   // ERROR
-        //System.out.println(cartItemRepository.retrieveByCartStateAndNoDiscount(CartState.SOLD));  //Error
+        System.out.println(cartItemRepository.getByCart_CartStateAndProduct_Name(CartState.SOLD, "Tomatoes"));
+        //System.out.println(cartItemRepository.retrieveByCartStateAndProduct_Name("SOLD", "Tomatoes"));
+        //System.out.println(cartItemRepository.retrieveByCartStateAndNoDiscount("SOLD"));
 
         System.out.println("------------CART----------------");
 
